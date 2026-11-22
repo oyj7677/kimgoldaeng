@@ -218,49 +218,25 @@
     }
     .card-main-link {
       display: flex;
-      gap: 13px;
-      padding: 13px;
+      flex-direction: column;
+      gap: 11px;
+      padding: 14px;
       text-decoration: none;
       color: inherit;
-      align-items: center;
-    }
-    .thumb-wrap {
-      position: relative;
-      flex: 0 0 84px;
-      width: 84px;
-      height: 118px;
-      border-radius: 12px;
-      overflow: hidden;
-      background: #F4ECE0;
-    }
-    .thumb-wrap img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-    .ep-number-badge {
-      position: absolute;
-      top: 6px;
-      left: 6px;
-      background: rgba(25, 20, 14, 0.84);
-      color: #FFE169;
-      font-size: 11px;
-      font-weight: 800;
-      padding: 2px 7px;
-      border-radius: 7px;
-      backdrop-filter: blur(4px);
-    }
-    .card-body {
-      flex: 1;
-      min-width: 0;
     }
     .card-top-row {
       display: flex;
       align-items: center;
       gap: 6px;
       flex-wrap: wrap;
-      margin-bottom: 5px;
+    }
+    .ep-number-chip {
+      background: #221C14;
+      color: #FFE169;
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 2px 8px;
+      border-radius: 7px;
     }
     .ep-pill {
       font-size: 10.5px;
@@ -279,10 +255,72 @@
     .ep-theme {
       font-size: 11.5px;
       color: var(--text-sub);
-      font-weight: 600;
+      font-weight: 700;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
+    }
+    .card-mid-row {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+    .dual-thumbs {
+      display: flex;
+      gap: 7px;
+      flex: 0 0 auto;
+      align-items: center;
+    }
+    .scene-thumb-box {
+      position: relative;
+      width: 68px;
+      height: 96px;
+      border-radius: 11px;
+      overflow: hidden;
+      background: #F4ECE0;
+      border: 1px solid #EADBC2;
+    }
+    .prod-thumb-box {
+      position: relative;
+      width: 96px;
+      height: 96px;
+      border-radius: 11px;
+      overflow: hidden;
+      background: #FFFFFF;
+      border: 1.5px solid #FFCC00;
+      box-shadow: 0 3px 9px rgba(255, 184, 0, 0.16);
+    }
+    .scene-thumb-box img,
+    .prod-thumb-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .scene-tag,
+    .prod-tag {
+      position: absolute;
+      bottom: 4px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 9.5px;
+      font-weight: 800;
+      padding: 1.5px 6px;
+      border-radius: 999px;
+      white-space: nowrap;
+      backdrop-filter: blur(4px);
+    }
+    .scene-tag {
+      background: rgba(25, 20, 14, 0.78);
+      color: #FFF;
+    }
+    .prod-tag {
+      background: rgba(232, 74, 59, 0.92);
+      color: #FFF;
+    }
+    .card-body {
+      flex: 1;
+      min-width: 0;
     }
     .item-title {
       font-size: 15.5px;
@@ -290,28 +328,36 @@
       letter-spacing: -0.3px;
       margin-bottom: 3px;
       color: var(--text-main);
+      line-height: 1.3;
+    }
+    .item-sub {
+      font-size: 12px;
+      font-weight: 700;
+      color: #B85D00;
+      margin-bottom: 5px;
+      line-height: 1.35;
     }
     .item-desc {
-      font-size: 12px;
+      font-size: 11.5px;
       color: var(--text-sub);
-      margin-bottom: 10px;
       display: -webkit-box;
       -webkit-line-clamp: 2;
       -webkit-box-orient: vertical;
       overflow: hidden;
+      line-height: 1.35;
     }
     .cta-btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      gap: 5px;
+      gap: 6px;
       width: 100%;
       background: linear-gradient(135deg, #FFCC00 0%, #FFA800 100%);
       color: #231A00;
-      font-size: 13px;
+      font-size: 13.5px;
       font-weight: 800;
-      padding: 9px 12px;
-      border-radius: 10px;
+      padding: 10px 12px;
+      border-radius: 11px;
       box-shadow: 0 3px 10px rgba(255, 176, 0, 0.25);
     }
     .watch-row {
@@ -408,177 +454,265 @@
 
     <main class="card-list" id="cardList">
       
-      <article class="product-card" data-ep="11" data-keywords="11 ep11 11 ep11 핫팩 손난로 한파 겨울출근 손일병 대용량 군용 핫팩 김누렁이 가방에 10개나 챙겨온 대용량 겨울 핫팩 가방이 왜 이렇게 뚱뚱하나 열어봤더니 핫팩 폭탄ㅋㅋㅋ">
+      <article class="product-card" data-ep="11" data-keywords="11 ep11 11 ep11 핫팩 손난로 한파 겨울출근 손일병 대용량 군용 핫팩 김누렁이 가방에 10개나 챙겨온 대용량 겨울 핫팩 20시간 지속 특대형 포켓 손난로 180g × 50개 가방이 왜 이렇게 뚱뚱하나 열어봤더니 핫팩 폭탄ㅋㅋㅋ">
         <a class="card-main-link" href="https://link.coupang.com/a/iStC0uRRAG" target="_blank" rel="noopener sponsored">
-          <div class="thumb-wrap">
-            <img src="assets/ep11.jpg" alt="EP.11 썸네일" loading="lazy" />
-            <span class="ep-number-badge">#11</span>
+          <div class="card-top-row">
+            <span class="ep-number-chip">#11</span>
+            <span class="ep-pill live">EP.11 · 방영작</span>
+            <span class="ep-theme">🔥 핫팩 10개 온돌방 편</span>
           </div>
-          <div class="card-body">
-            <div class="card-top-row">
-              <span class="ep-pill live">EP.11 · 방영작</span>
-              <span class="ep-theme">🔥 핫팩 10개 온돌방 편</span>
+          <div class="card-mid-row">
+            <div class="dual-thumbs">
+              <div class="scene-thumb-box">
+                <img src="assets/ep11.jpg" alt="EP.11 영상 장면" loading="lazy" />
+                <span class="scene-tag">영상 장면</span>
+              </div>
+              
+            <div class="prod-thumb-box">
+              <img src="assets/product_ep11.jpg" alt="손일병 대용량 군용 핫팩 상품 이미지" loading="lazy" />
+              <span class="prod-tag">실제 상품</span>
             </div>
-            <h2 class="item-title">손일병 대용량 군용 핫팩</h2>
-            <p class="item-desc">김누렁이 가방에 10개나 챙겨온 대용량 겨울 핫팩</p>
-            <div class="cta-btn">
-              <span>쿠팡에서 최저가 보러가기</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </div>
+            <div class="card-body">
+              <h2 class="item-title">손일병 대용량 군용 핫팩</h2>
+              <p class="item-sub">20시간 지속 특대형 포켓 손난로 180g × 50개</p>
+              <p class="item-desc">🐶 김누렁이 가방에 10개나 챙겨온 대용량 겨울 핫팩</p>
+            </div>
+          </div>
+          <div class="cta-btn">
+            <span>🛒 쿠팡에서 상품 자세히 보기</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </div>
         </a>
-        <div class="watch-row"><a href="https://www.instagram.com/kim.goldaeng/reel/DgCYb_nhOTP/" target="_blank" rel="noopener" class="mini-link ig">릴스 보기</a><a href="https://www.youtube.com/shorts/Ru_WT-kZc3U" target="_blank" rel="noopener" class="mini-link yt">쇼츠 보기</a></div>
+        <div class="watch-row"><a href="https://www.instagram.com/kim.goldaeng/reel/DgCYb_nhOTP/" target="_blank" rel="noopener" class="mini-link ig">📸 릴스 보기</a><a href="https://www.youtube.com/shorts/Ru_WT-kZc3U" target="_blank" rel="noopener" class="mini-link yt">▶️ 쇼츠 보기</a></div>
       </article>
 
-      <article class="product-card" data-ep="10" data-keywords="10 ep10 10 ep10 붕어빵 슈붕 팥붕 슈크림 간식 달콤 바삭 슈크림 미니 붕어빵 김누렁이 훔쳐 먹은 달콤 바삭 슈크림 붕어빵 붕어빵 심부름 시켰더니 입가에 슈크림 묻히고 옴ㅋㅋㅋ">
+      <article class="product-card" data-ep="10" data-keywords="10 ep10 10 ep10 붕어빵 슈붕 팥붕 슈크림 간식 달콤 바삭 슈크림 미니 붕어빵 김누렁이 훔쳐 먹은 달콤 바삭 슈크림 붕어빵 반쿡 우리쌀 슈크림 미니붕어빵 대용량 붕어빵 심부름 시켰더니 입가에 슈크림 묻히고 옴ㅋㅋㅋ">
         <a class="card-main-link" href="https://link.coupang.com/a/iStqLM5RKK" target="_blank" rel="noopener sponsored">
-          <div class="thumb-wrap">
-            <img src="assets/ep10.jpg" alt="EP.10 썸네일" loading="lazy" />
-            <span class="ep-number-badge">#10</span>
+          <div class="card-top-row">
+            <span class="ep-number-chip">#10</span>
+            <span class="ep-pill live">EP.10 · 방영작</span>
+            <span class="ep-theme">🐟 슈크림 붕어빵 심부름 편</span>
           </div>
-          <div class="card-body">
-            <div class="card-top-row">
-              <span class="ep-pill live">EP.10 · 방영작</span>
-              <span class="ep-theme">🐟 슈크림 붕어빵 심부름 편</span>
+          <div class="card-mid-row">
+            <div class="dual-thumbs">
+              <div class="scene-thumb-box">
+                <img src="assets/ep10.jpg" alt="EP.10 영상 장면" loading="lazy" />
+                <span class="scene-tag">영상 장면</span>
+              </div>
+              
+            <div class="prod-thumb-box">
+              <img src="assets/product_ep10.jpg" alt="달콤 바삭 슈크림 미니 붕어빵 상품 이미지" loading="lazy" />
+              <span class="prod-tag">실제 상품</span>
             </div>
-            <h2 class="item-title">달콤 바삭 슈크림 미니 붕어빵</h2>
-            <p class="item-desc">김누렁이 훔쳐 먹은 달콤 바삭 슈크림 붕어빵</p>
-            <div class="cta-btn">
-              <span>쿠팡에서 최저가 보러가기</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </div>
+            <div class="card-body">
+              <h2 class="item-title">달콤 바삭 슈크림 미니 붕어빵</h2>
+              <p class="item-sub">반쿡 우리쌀 슈크림 미니붕어빵 대용량</p>
+              <p class="item-desc">🐶 김누렁이 훔쳐 먹은 달콤 바삭 슈크림 붕어빵</p>
+            </div>
+          </div>
+          <div class="cta-btn">
+            <span>🛒 쿠팡에서 상품 자세히 보기</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </div>
         </a>
-        <div class="watch-row"><a href="https://www.instagram.com/kim.goldaeng/reel/DgCYV9DhmP8/" target="_blank" rel="noopener" class="mini-link ig">릴스 보기</a><a href="https://www.youtube.com/shorts/YNPjdIKWjhQ" target="_blank" rel="noopener" class="mini-link yt">쇼츠 보기</a></div>
+        <div class="watch-row"><a href="https://www.instagram.com/kim.goldaeng/reel/DgCYV9DhmP8/" target="_blank" rel="noopener" class="mini-link ig">📸 릴스 보기</a><a href="https://www.youtube.com/shorts/YNPjdIKWjhQ" target="_blank" rel="noopener" class="mini-link yt">▶️ 쇼츠 보기</a></div>
       </article>
 
-      <article class="product-card" data-ep="9" data-keywords="9 ep9 9 ep9 발난로 히터 온풍기 인절미 사무실 책상 밑 미니 발난로 온풍기 김누렁이 앞발로 켜고 녹아내린 책상 밑 미니 발난로 사무실 발난로 틀어줬더니 신입이 인절미처럼 녹음ㅋㅋㅋ">
+      <article class="product-card" data-ep="9" data-keywords="9 ep9 9 ep9 발난로 히터 온풍기 인절미 사무실 책상 밑 미니 발난로 · 전기히터 김누렁이 앞발로 켜고 녹아내린 책상 밑 미니 발난로 1초 발열 저소음 사무실 온풍기/히터 사무실 발난로 틀어줬더니 신입이 인절미처럼 녹음ㅋㅋㅋ">
         <a class="card-main-link" href="https://link.coupang.com/a/iSl6o6Bqc8" target="_blank" rel="noopener sponsored">
-          <div class="thumb-wrap">
-            <img src="assets/ep09.jpg" alt="EP.9 썸네일" loading="lazy" />
-            <span class="ep-number-badge">#9</span>
+          <div class="card-top-row">
+            <span class="ep-number-chip">#9</span>
+            <span class="ep-pill live">EP.9 · 방영작</span>
+            <span class="ep-theme">🫠 사무실 발난로 기절 편</span>
           </div>
-          <div class="card-body">
-            <div class="card-top-row">
-              <span class="ep-pill live">EP.9 · 방영작</span>
-              <span class="ep-theme">🫠 사무실 발난로 기절 편</span>
+          <div class="card-mid-row">
+            <div class="dual-thumbs">
+              <div class="scene-thumb-box">
+                <img src="assets/ep09.jpg" alt="EP.9 영상 장면" loading="lazy" />
+                <span class="scene-tag">영상 장면</span>
+              </div>
+              
+            <div class="prod-thumb-box">
+              <img src="assets/product_ep09.jpg" alt="책상 밑 미니 발난로 · 전기히터 상품 이미지" loading="lazy" />
+              <span class="prod-tag">실제 상품</span>
             </div>
-            <h2 class="item-title">책상 밑 미니 발난로 온풍기</h2>
-            <p class="item-desc">김누렁이 앞발로 켜고 녹아내린 책상 밑 미니 발난로</p>
-            <div class="cta-btn">
-              <span>쿠팡에서 최저가 보러가기</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </div>
+            <div class="card-body">
+              <h2 class="item-title">책상 밑 미니 발난로 · 전기히터</h2>
+              <p class="item-sub">1초 발열 저소음 사무실 온풍기/히터</p>
+              <p class="item-desc">🐶 김누렁이 앞발로 켜고 녹아내린 책상 밑 미니 발난로</p>
+            </div>
+          </div>
+          <div class="cta-btn">
+            <span>🛒 쿠팡에서 상품 자세히 보기</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </div>
         </a>
-        <div class="watch-row"><a href="https://www.instagram.com/kim.goldaeng/reel/DgCYQe-BfkD/" target="_blank" rel="noopener" class="mini-link ig">릴스 보기</a><a href="https://www.youtube.com/shorts/6CpAZNlcbB8" target="_blank" rel="noopener" class="mini-link yt">쇼츠 보기</a></div>
+        <div class="watch-row"><a href="https://www.instagram.com/kim.goldaeng/reel/DgCYQe-BfkD/" target="_blank" rel="noopener" class="mini-link ig">📸 릴스 보기</a><a href="https://www.youtube.com/shorts/6CpAZNlcbB8" target="_blank" rel="noopener" class="mini-link yt">▶️ 쇼츠 보기</a></div>
       </article>
 
-      <article class="product-card" data-ep="8" data-keywords="8 ep8 8 ep8 고구마 군고구마 눈사람 한파 출근 따끈한 해남 꿀 군고구마 김누렁이 가방 속에 품어온 따끈한 군고구마 영하 10도 한파에 신입이 출근하다 눈사람 됨ㅋㅋㅋ">
+      <article class="product-card" data-ep="8" data-keywords="8 ep8 8 ep8 고구마 군고구마 눈사람 한파 출근 따끈한 해남 꿀 군고구마 김누렁이 가방 속에 품어온 따끈한 군고구마 해남 베니하루카 꿀고구마 1박스 영하 10도 한파에 신입이 출근하다 눈사람 됨ㅋㅋㅋ">
         <a class="card-main-link" href="https://link.coupang.com/a/iSlmnC7R36" target="_blank" rel="noopener sponsored">
-          <div class="thumb-wrap">
-            <img src="assets/ep08.jpg" alt="EP.8 썸네일" loading="lazy" />
-            <span class="ep-number-badge">#8</span>
+          <div class="card-top-row">
+            <span class="ep-number-chip">#8</span>
+            <span class="ep-pill live">EP.8 · 방영작</span>
+            <span class="ep-theme">☃️ 눈사람 군고구마 편</span>
           </div>
-          <div class="card-body">
-            <div class="card-top-row">
-              <span class="ep-pill live">EP.8 · 방영작</span>
-              <span class="ep-theme">☃️ 눈사람 군고구마 편</span>
+          <div class="card-mid-row">
+            <div class="dual-thumbs">
+              <div class="scene-thumb-box">
+                <img src="assets/ep08.jpg" alt="EP.8 영상 장면" loading="lazy" />
+                <span class="scene-tag">영상 장면</span>
+              </div>
+              
+            <div class="prod-thumb-box">
+              <img src="assets/product_ep08.jpg" alt="따끈한 해남 꿀 군고구마 상품 이미지" loading="lazy" />
+              <span class="prod-tag">실제 상품</span>
             </div>
-            <h2 class="item-title">따끈한 해남 꿀 군고구마</h2>
-            <p class="item-desc">김누렁이 가방 속에 품어온 따끈한 군고구마</p>
-            <div class="cta-btn">
-              <span>쿠팡에서 최저가 보러가기</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </div>
+            <div class="card-body">
+              <h2 class="item-title">따끈한 해남 꿀 군고구마</h2>
+              <p class="item-sub">해남 베니하루카 꿀고구마 1박스</p>
+              <p class="item-desc">🐶 김누렁이 가방 속에 품어온 따끈한 군고구마</p>
+            </div>
+          </div>
+          <div class="cta-btn">
+            <span>🛒 쿠팡에서 상품 자세히 보기</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </div>
         </a>
-        <div class="watch-row"><a href="https://www.instagram.com/kim.goldaeng/reel/DgCYKsetXZ9/" target="_blank" rel="noopener" class="mini-link ig">릴스 보기</a><a href="https://www.youtube.com/shorts/4Bsah0T6JFw" target="_blank" rel="noopener" class="mini-link yt">쇼츠 보기</a></div>
+        <div class="watch-row"><a href="https://www.instagram.com/kim.goldaeng/reel/DgCYKsetXZ9/" target="_blank" rel="noopener" class="mini-link ig">📸 릴스 보기</a><a href="https://www.youtube.com/shorts/4Bsah0T6JFw" target="_blank" rel="noopener" class="mini-link yt">▶️ 쇼츠 보기</a></div>
       </article>
 
-      <article class="product-card" data-ep="15" data-keywords="15 ep15 15 ep15 담요 무릎담요 극세사담요 야근 김밥 포근한 극세사 망토형 무릎담요 김누렁을 김밥으로 말아버린 포근한 극세사 무릎담요 야근 같이 해준다던 신입이 담요 김밥 돼서 먼저 기절ㅋㅋㅋ">
+      <article class="product-card" data-ep="15" data-keywords="15 ep15 15 ep15 담요 무릎담요 극세사담요 야근 김밥 허넬리 똑딱이 망토형 극세사 무릎담요 김누렁을 김밥으로 말아버린 포근한 극세사 무릎담요 흘러내리지 않는 똑딱이 극세사 어깨·무릎담요 야근 같이 해준다던 신입이 담요 김밥 돼서 먼저 기절ㅋㅋㅋ">
         <a class="card-main-link" href="https://link.coupang.com/a/iSJwMHSxBQ" target="_blank" rel="noopener sponsored">
-          <div class="thumb-wrap">
-            <img src="assets/ep15.jpg" alt="EP.15 썸네일" loading="lazy" />
-            <span class="ep-number-badge">#15</span>
+          <div class="card-top-row">
+            <span class="ep-number-chip">#15</span>
+            <span class="ep-pill upcoming">EP.15 · 공개예정</span>
+            <span class="ep-theme">🛌 야근 담요 김밥 누렁이 편</span>
           </div>
-          <div class="card-body">
-            <div class="card-top-row">
-              <span class="ep-pill upcoming">EP.15 · 공개예정</span>
-              <span class="ep-theme">🛌 야근 담요 김밥 누렁이 편</span>
+          <div class="card-mid-row">
+            <div class="dual-thumbs">
+              <div class="scene-thumb-box">
+                <img src="assets/ep15.jpg" alt="EP.15 영상 장면" loading="lazy" />
+                <span class="scene-tag">영상 장면</span>
+              </div>
+              
+            <div class="prod-thumb-box">
+              <img src="assets/product_ep15.jpg" alt="허넬리 똑딱이 망토형 극세사 무릎담요 상품 이미지" loading="lazy" />
+              <span class="prod-tag">실제 상품</span>
             </div>
-            <h2 class="item-title">포근한 극세사 망토형 무릎담요</h2>
-            <p class="item-desc">김누렁을 김밥으로 말아버린 포근한 극세사 무릎담요</p>
-            <div class="cta-btn">
-              <span>쿠팡에서 최저가 보러가기</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </div>
+            <div class="card-body">
+              <h2 class="item-title">허넬리 똑딱이 망토형 극세사 무릎담요</h2>
+              <p class="item-sub">흘러내리지 않는 똑딱이 극세사 어깨·무릎담요</p>
+              <p class="item-desc">🐶 김누렁을 김밥으로 말아버린 포근한 극세사 무릎담요</p>
+            </div>
+          </div>
+          <div class="cta-btn">
+            <span>🛒 쿠팡에서 상품 자세히 보기</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </div>
         </a>
         
       </article>
 
-      <article class="product-card" data-ep="14" data-keywords="14 ep14 14 ep14 텀블러 보온병 보온텀블러 탕비실 컵라면 대용량 스텐 보온 텀블러 겨울 탕비실 필수템 보온 텀블러 점심에 컵라면 끓였더니 자기 밥그릇 들고 줄 서 있음ㅋㅋㅋ">
+      <article class="product-card" data-ep="14" data-keywords="14 ep14 14 ep14 텀블러 보온병 보온텀블러 탕비실 컵라면 moz 스웨덴 스텐 대용량 보온텀블러 겨울 탕비실 필수템 보온 텀블러 포스코 316 스텐 원터치 보온병 1300ml 점심에 컵라면 끓였더니 자기 밥그릇 들고 줄 서 있음ㅋㅋㅋ">
         <a class="card-main-link" href="https://link.coupang.com/a/iSJv5d5Hki" target="_blank" rel="noopener sponsored">
-          <div class="thumb-wrap">
-            <img src="assets/ep14.jpg" alt="EP.14 썸네일" loading="lazy" />
-            <span class="ep-number-badge">#14</span>
+          <div class="card-top-row">
+            <span class="ep-number-chip">#14</span>
+            <span class="ep-pill upcoming">EP.14 · 공개예정</span>
+            <span class="ep-theme">🍜 탕비실 밥그릇 줄 서기 편</span>
           </div>
-          <div class="card-body">
-            <div class="card-top-row">
-              <span class="ep-pill upcoming">EP.14 · 공개예정</span>
-              <span class="ep-theme">🍜 탕비실 밥그릇 줄 서기 편</span>
+          <div class="card-mid-row">
+            <div class="dual-thumbs">
+              <div class="scene-thumb-box">
+                <img src="assets/ep14.jpg" alt="EP.14 영상 장면" loading="lazy" />
+                <span class="scene-tag">영상 장면</span>
+              </div>
+              
+            <div class="prod-thumb-box">
+              <img src="assets/product_ep14.jpg" alt="MOZ 스웨덴 스텐 대용량 보온텀블러 상품 이미지" loading="lazy" />
+              <span class="prod-tag">실제 상품</span>
             </div>
-            <h2 class="item-title">대용량 스텐 보온 텀블러</h2>
-            <p class="item-desc">겨울 탕비실 필수템 보온 텀블러</p>
-            <div class="cta-btn">
-              <span>쿠팡에서 최저가 보러가기</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </div>
+            <div class="card-body">
+              <h2 class="item-title">MOZ 스웨덴 스텐 대용량 보온텀블러</h2>
+              <p class="item-sub">포스코 316 스텐 원터치 보온병 1300ml</p>
+              <p class="item-desc">🐶 겨울 탕비실 필수템 보온 텀블러</p>
+            </div>
+          </div>
+          <div class="cta-btn">
+            <span>🛒 쿠팡에서 상품 자세히 보기</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </div>
         </a>
         
       </article>
 
-      <article class="product-card" data-ep="13" data-keywords="13 ep13 13 ep13 가습기 미니가습기 사무실 무드등 물광 무소음 탁상용 무선 미니 가습기 김누렁이 안개 잡으려다 촉촉해진 사무실 탁상용 미니 가습기 사무실 미니 가습기 틀어줬더니 안개 잡겠다고 난리 남ㅋㅋㅋ">
+      <article class="product-card" data-ep="13" data-keywords="13 ep13 13 ep13 가습기 미니가습기 사무실 무드등 물광 풀라스 uv 살균 무선 미니 가습기 김누렁이 안개 잡으려다 촉촉해진 사무실 탁상용 미니 가습기 무소음 탁상용 대용량 무선 미니 가습기 사무실 미니 가습기 틀어줬더니 안개 잡겠다고 난리 남ㅋㅋㅋ">
         <a class="card-main-link" href="https://link.coupang.com/a/iSJvnWGkxM" target="_blank" rel="noopener sponsored">
-          <div class="thumb-wrap">
-            <img src="assets/ep13.jpg" alt="EP.13 썸네일" loading="lazy" />
-            <span class="ep-number-badge">#13</span>
+          <div class="card-top-row">
+            <span class="ep-number-chip">#13</span>
+            <span class="ep-pill upcoming">EP.13 · 공개예정</span>
+            <span class="ep-theme">💧 사무실 안개 펀치 물광 편</span>
           </div>
-          <div class="card-body">
-            <div class="card-top-row">
-              <span class="ep-pill upcoming">EP.13 · 공개예정</span>
-              <span class="ep-theme">💧 사무실 안개 펀치 물광 편</span>
+          <div class="card-mid-row">
+            <div class="dual-thumbs">
+              <div class="scene-thumb-box">
+                <img src="assets/ep13.jpg" alt="EP.13 영상 장면" loading="lazy" />
+                <span class="scene-tag">영상 장면</span>
+              </div>
+              
+            <div class="prod-thumb-box">
+              <img src="assets/product_ep13.jpg" alt="풀라스 UV 살균 무선 미니 가습기 상품 이미지" loading="lazy" />
+              <span class="prod-tag">실제 상품</span>
             </div>
-            <h2 class="item-title">무소음 탁상용 무선 미니 가습기</h2>
-            <p class="item-desc">김누렁이 안개 잡으려다 촉촉해진 사무실 탁상용 미니 가습기</p>
-            <div class="cta-btn">
-              <span>쿠팡에서 최저가 보러가기</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </div>
+            <div class="card-body">
+              <h2 class="item-title">풀라스 UV 살균 무선 미니 가습기</h2>
+              <p class="item-sub">무소음 탁상용 대용량 무선 미니 가습기</p>
+              <p class="item-desc">🐶 김누렁이 안개 잡으려다 촉촉해진 사무실 탁상용 미니 가습기</p>
+            </div>
+          </div>
+          <div class="cta-btn">
+            <span>🛒 쿠팡에서 상품 자세히 보기</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </div>
         </a>
         
       </article>
 
-      <article class="product-card" data-ep="12" data-keywords="12 ep12 12 ep12 귤 감귤 제주감귤 금요일 칼퇴 제주 고당도 햇 노지감귤 1박스 김누렁을 0.1초 만에 벌떡 일으킨 달콤한 제주 감귤 금요일 5시 59분에 신입 불렀더니 바닥에 기절한 척함ㅋㅋㅋ">
+      <article class="product-card" data-ep="12" data-keywords="12 ep12 12 ep12 귤 감귤 제주감귤 금요일 칼퇴 제주 고당도 햇 노지감귤 1박스 김누렁을 0.1초 만에 벌떡 일으킨 달콤한 제주 감귤 산지직송 제주 고당도 로얄과 감귤 10kg 금요일 5시 59분에 신입 불렀더니 바닥에 기절한 척함ㅋㅋㅋ">
         <a class="card-main-link" href="https://link.coupang.com/a/iSJuEArqGO" target="_blank" rel="noopener sponsored">
-          <div class="thumb-wrap">
-            <img src="assets/ep12.jpg" alt="EP.12 썸네일" loading="lazy" />
-            <span class="ep-number-badge">#12</span>
+          <div class="card-top-row">
+            <span class="ep-number-chip">#12</span>
+            <span class="ep-pill upcoming">EP.12 · 공개예정</span>
+            <span class="ep-theme">🍊 금요일 5시 59분 기절 연기 편</span>
           </div>
-          <div class="card-body">
-            <div class="card-top-row">
-              <span class="ep-pill upcoming">EP.12 · 공개예정</span>
-              <span class="ep-theme">🍊 금요일 5시 59분 기절 연기 편</span>
+          <div class="card-mid-row">
+            <div class="dual-thumbs">
+              <div class="scene-thumb-box">
+                <img src="assets/ep12.jpg" alt="EP.12 영상 장면" loading="lazy" />
+                <span class="scene-tag">영상 장면</span>
+              </div>
+              
+            <div class="prod-thumb-box">
+              <img src="assets/product_ep12.jpg" alt="제주 고당도 햇 노지감귤 1박스 상품 이미지" loading="lazy" />
+              <span class="prod-tag">실제 상품</span>
             </div>
-            <h2 class="item-title">제주 고당도 햇 노지감귤 1박스</h2>
-            <p class="item-desc">김누렁을 0.1초 만에 벌떡 일으킨 달콤한 제주 감귤</p>
-            <div class="cta-btn">
-              <span>쿠팡에서 최저가 보러가기</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
             </div>
+            <div class="card-body">
+              <h2 class="item-title">제주 고당도 햇 노지감귤 1박스</h2>
+              <p class="item-sub">산지직송 제주 고당도 로얄과 감귤 10kg</p>
+              <p class="item-desc">🐶 김누렁을 0.1초 만에 벌떡 일으킨 달콤한 제주 감귤</p>
+            </div>
+          </div>
+          <div class="cta-btn">
+            <span>🛒 쿠팡에서 상품 자세히 보기</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
           </div>
         </a>
         
